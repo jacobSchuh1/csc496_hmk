@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
-import Seo from '../components/seo'
+import Layout from '../../components/layout'
+import Seo from '../../components/seo'
 
 const BlogPage = ({ data }) => {
   return (
@@ -11,6 +11,7 @@ const BlogPage = ({ data }) => {
           <article key={node.id}>
             <h2>{node.frontmatter.title}</h2>
             <p>Posted: {node.frontmatter.date}</p>
+            <p>{node.excerpt}</p>
           </article>
         ))
       }
